@@ -1,8 +1,8 @@
-# YgLK.github.io - Welcome! :smile:
+# Welcome! 
 
 
 
-## Small dose of unpopular facts :eyes: 
+## Small dose of unpopular facts 
 
 * North Korea and Cuba are the only places you can't buy Coca-Cola.
 * The entire world's population could fit inside Los Angeles.
