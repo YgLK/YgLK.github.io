@@ -1,5 +1,5 @@
 # Welcome! 
-:pushpin:	I am currently working on <i> Meshi</i> project:
+I am currently working on <i> Meshi</i> project:
 
 ## Meshi
 
