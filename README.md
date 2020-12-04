@@ -1,4 +1,5 @@
 # Welcome! 
+:pushpin:	I am currently working on <i> Meshi</i> project:
 
 ## Meshi
 
@@ -32,7 +33,6 @@ Find information on:
 
   * The future of Meshi
 
-# 
 
 
 
