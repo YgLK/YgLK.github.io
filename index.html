@@ -1,163 +1,716 @@
-    <!DOCTYPE html>
-    <html lang="en" data-bs-theme="dark">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>John Doe - Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <style>
-            body {
-                font-family: 'Inter', sans-serif;
-                line-height: 1.6;
-                color: #e2e8f0;
-                background-color: #1a202c;
-            }
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>GIS</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-            .container {
-                max-width: 800px;
-                background-color: #2d3748;
-                border-radius: 12px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 2rem;
-                margin-top: 2rem;
-                margin-bottom: 2rem;
-            }
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-            h1, h2, h3 {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-            }
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-            h1 {
-                font-size: 2.5rem;
-                color: #f7fafc;
-                margin-bottom: 1rem;
-            }
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-            h2 {
-                font-size: 1.8rem;
-                color: #e2e8f0;
-                margin-bottom: 1.5rem;
-                padding-bottom: 0.5rem;
-                border-bottom: 2px solid #4a5568;
-            }
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-            .date {
-                font-style: italic;
-                color: #a0aec0;
-            }
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
-            .skills-list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                list-style-type: none;
-                padding: 0;
-            }
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
 
-            .skills-list li {
-                background-color: #4a5568;
-                color: #e2e8f0;
-                padding: 6px 12px;
-                border-radius: 20px;
-                font-size: 0.9rem;
-            }
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
 
-            .social-links a {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 2.5rem;
-                height: 2.5rem;
-                background-color: #4a5568;
-                color: #e2e8f0;
-                font-size: 1.2rem;
-                margin-right: 1rem;
-                border-radius: 50%;
-                text-decoration: none;
-                transition: all 0.3s ease;
-            }
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
 
-            .social-links a:hover {
-                background-color: #718096;
-                transform: translateY(-2px);
-            }
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
 
-            .btn-primary {
-                background-color: #4299e1;
-                border-color: #4299e1;
-            }
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
 
-            .btn-primary:hover {
-                background-color: #3182ce;
-                border-color: #3182ce;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <header class="text-center text-lg-start mb-5">
-                <h1>John Doe</h1>
-                <p class="lead">Master's Student in Computer Science</p>
-            </header>
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
 
-            <section class="mb-5">
-                <h2>About Me</h2>
-                <p>I am a dedicated and detail-oriented master's student in Computer Science with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success. I have experience in various programming languages and am adept at identifying and resolving complex issues.</p>
-                <div class="social-links mt-3">
-                    <a href="https://linkedin.com" aria-label="LinkedIn">in</a>
-                    <a href="https://github.com" aria-label="GitHub">gh</a>
-                </div>
-            </section>
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
 
-            <section class="mb-5">
-                <h2>Experience</h2>
-                <div class="mb-4">
-                    <h3>Software Engineering Intern</h3>
-                    <p class="mb-0">Tech Solutions <span class="date">| June 2023 - Present</span></p>
-                    <p>Assisted in the development of web applications and software solutions, contributing to various stages of the development lifecycle. Collaborated with cross-functional teams to deliver high-quality products on time.</p>
-                </div>
-                <div class="mb-4">
-                    <h3>Research Assistant</h3>
-                    <p class="mb-0">University Research Lab <span class="date">| September 2022 - May 2023</span></p>
-                    <p>Conducted research on machine learning algorithms and their applications in data analysis. Developed scripts and tools for automating data collection and processing, resulting in significant efficiency improvements.</p>
-                </div>
-            </section>
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
 
-            <section class="mb-5">
-                <h2>Education</h2>
-                <div class="mb-3">
-                    <h3>Master of Science in Computer Science</h3>
-                    <p class="mb-0">University of Technology <span class="date">| August 2021 - May 2023</span></p>
-                </div>
-                <div class="mb-3">
-                    <h3>Bachelor of Science in Computer Science</h3>
-                    <p class="mb-0">City University <span class="date">| August 2017 - May 2021</span></p>
-                </div>
-            </section>
+mark {
+	background-color: transparent;
+}
 
-            <section class="mb-5">
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li>Python</li>
-                    <li>Data Analysis</li>
-                    <li>Machine Learning</li>
-                    <li>Git</li>
-                    <li>Linux</li>
-                    <li>AWS</li>
-                    <li>Data Visualization</li>
-                    <li>Statistical Modeling</li>
-                </ul>
-            </section>
+.indented {
+	padding-left: 1.5em;
+}
 
-            <section class="mb-5">
-                <h2>Projects</h2>
-                <p>I have worked on various projects throughout my academic and professional career. Click the button below to view some of my highlighted projects.</p>
-                <a href="projects.html" class="btn btn-primary">View Projects</a>
-            </section>
-        </div>
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-    </html>
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1567d587-cf48-8027-9324-c8a26b0f62ce" class="page sans"><header><h1 class="page-title">GIS</h1><p class="page-description"></p></header><div class="page-body"><p id="1567d587-cf48-80bc-9221-d7e7e59fe1fd" class="">
+</p><hr id="1567d587-cf48-80ef-99d2-f2e2a1d41bfa"/><p id="1567d587-cf48-809d-b841-c9448db08851" class="">SES.pdf</p><h1 id="1567d587-cf48-8067-8a67-d618727f445e" class="">Spatially Enabled Society (SES)</h1><ul id="1567d587-cf48-8000-a7c7-eaa514ac284d" class="bulleted-list"><li style="list-style-type:disc">is one that makes use and benefits from a wide array of spatial data, information, and services as a means to organize its activities</li></ul><ul id="1567d587-cf48-8052-a76b-ea467ee7b232" class="bulleted-list"><li style="list-style-type:disc">the concept where location, place and other spatial information and services are ubiquitously available to governments, citizens and businesses as a means of organising their activities<br/>- such data and information must be available in a free, efficient, and comprehensive way<br/>- it therefore needs to be organized in such a way that it can easily be shared, integrated, and analysed<br/></li></ul><hr id="1567d587-cf48-80a4-b3a0-d4d6edf5f36a"/><p id="1567d587-cf48-8086-b24d-e947fc07e10e" class="">Spatial enablement (1)</p><ul id="1567d587-cf48-8079-ac4e-f7b28662eb6a" class="bulleted-list"><li style="list-style-type:disc">the ability to add location to almost all existing<br/>information<br/></li></ul><ul id="1567d587-cf48-805e-baf6-f1e3abf83843" class="bulleted-list"><li style="list-style-type:disc">uses the concept of place and location to organize<br/>information and processes<br/></li></ul><ul id="1567d587-cf48-80b5-a0dd-e035c9833560" class="bulleted-list"><li style="list-style-type:disc">requires (spatial) information to be collected, updated,<br/>analysed, represented, and communicated<br/></li></ul><ul id="1567d587-cf48-808b-a2b9-da481192eced" class="bulleted-list"><li style="list-style-type:disc">depends primarily on the spatial data infrastructure (SDI)<br/><br/></li></ul><hr id="1567d587-cf48-8049-94f3-ccd0995b62bd"/><figure id="1567d587-cf48-8060-8d74-f2c91e15f8e3" class="image"><a href="image.png"><img style="width:707.9874877929688px" src="image.png"/></a></figure><hr id="1567d587-cf48-8071-b7d5-da8630fbd7dd"/><h2 id="1567d587-cf48-80f6-b16c-fba6d09b123f" class="">Geographic Information System (GIS) </h2><p id="1567d587-cf48-809b-bbd0-cb7a20f8ea16" class="">Data input &amp; Data processing → Database management → Data output</p><hr id="1567d587-cf48-80a2-bb9e-fa4f0c3664ee"/><p id="1567d587-cf48-80a4-a2f3-f4bc1d63a61e" class="">Spatial enablement </p><ul id="1567d587-cf48-80a2-b994-cc225e15d4dd" class="bulleted-list"><li style="list-style-type:disc"><strong>Global Positioning System (GPS)</strong>: on 1 May 2000, <br/><br/><em>Selective Availability</em> (a means of reducing the precision of civilian receivers) was definitively switched off, improving navigation accuracy to at least 20 m instead of the previous 100 m</li></ul><ul id="1567d587-cf48-8028-a111-d16f6eefbb49" class="bulleted-list"><li style="list-style-type:disc">developments in mobile telephony<ul id="1567d587-cf48-80e1-aef2-cf3d64e768f1" class="bulleted-list"><li style="list-style-type:circle">smartphones (from 2007)</li></ul><ul id="1567d587-cf48-8016-a9b7-c47620863ee5" class="bulleted-list"><li style="list-style-type:circle">broadband cellular networks (3G, 4G, 5G, …)</li></ul></li></ul><hr id="1567d587-cf48-805f-87a6-e3e584378128"/><ul id="1567d587-cf48-80d0-b802-f7f162a8e041" class="bulleted-list"><li style="list-style-type:disc">Geo-tagged Photographs or Video material</li></ul><ul id="1567d587-cf48-802a-a936-c877ff28ab1f" class="bulleted-list"><li style="list-style-type:disc">Geo-located tweets</li></ul><ul id="1567d587-cf48-80f9-9477-dda1a8d24d69" class="bulleted-list"><li style="list-style-type:disc">GPX Trails </li></ul><ul id="1567d587-cf48-804f-9a1b-cb4395e925fb" class="bulleted-list"><li style="list-style-type:disc">POI Provision</li></ul><ul id="1567d587-cf48-8038-8fae-e8dfc32a497f" class="bulleted-list"><li style="list-style-type:disc">Geo-social networking</li></ul><ul id="1567d587-cf48-80b7-b906-e26debe00590" class="bulleted-list"><li style="list-style-type:disc">Edit/Update Contributions</li></ul><hr id="1567d587-cf48-802d-b209-cbc98e39ca83"/><p id="1567d587-cf48-8023-96e0-e38c6ced2890" class="">1962 - CGIS Roger Tomlinson Father of GIS</p><p id="1567d587-cf48-8031-a2fb-fabd6a095d71" class="">1969 - Internet</p><p id="1567d587-cf48-80fa-a5e0-dbc29749d97f" class="">1990 - WWW Tim Berners-Lee Father of the Web (URL, HTTP, HTML)</p><p id="1567d587-cf48-804d-91f2-d42a7ca6dc46" class="">1993 - Web GIS Xerox PARC Viewer</p><p id="1567d587-cf48-8027-bad9-f90cfd63780b" class="">Global Reach: large number of users, better cross-platform, low cost, easy to use, diverse applications</p><hr id="1567d587-cf48-8023-ac02-cb657cac92ed"/><p id="1567d587-cf48-8068-8c95-d7e59547103c" class="">AJAX</p><ul id="1567d587-cf48-809d-ac5b-ef215e98b4e8" class="bulleted-list"><li style="list-style-type:disc">Asynchronous</li></ul><ul id="1567d587-cf48-8034-bf54-c8b53e6c619f" class="bulleted-list"><li style="list-style-type:disc">Javascript</li></ul><ul id="1567d587-cf48-8032-ac73-cc1f77ca9e5d" class="bulleted-list"><li style="list-style-type:disc">XML</li></ul><hr id="1567d587-cf48-8005-93a1-c472d67f1229"/><h2 id="1567d587-cf48-80da-a884-d5ddec188adc" class="">GIS <del>vs Consumer Mapping</del></h2><ul id="1567d587-cf48-80d7-8c05-d5dd13e8dc3a" class="bulleted-list"><li style="list-style-type:disc">GIS user communities<ul id="1567d587-cf48-8031-9bb5-e14c38997c3f" class="bulleted-list"><li style="list-style-type:circle">State, Local and Federal Government</li></ul><ul id="1567d587-cf48-8078-a0e6-fedd222c77ba" class="bulleted-list"><li style="list-style-type:circle">Utilities industries</li></ul><ul id="1567d587-cf48-80cd-a3cf-ffc1b754d554" class="bulleted-list"><li style="list-style-type:circle">Surveying and mapping</li></ul></li></ul><ul id="1567d587-cf48-802e-9778-d95a25ef0658" class="bulleted-list"><li style="list-style-type:disc"><del>Consumer mapping user communities </del>Spatially enabled citizens<ul id="1567d587-cf48-8078-a467-c2395fd062b4" class="bulleted-list"><li style="list-style-type:circle"><del>Consumers</del></li></ul><ul id="1567d587-cf48-80f4-bbae-eb1d4d1ee513" class="bulleted-list"><li style="list-style-type:circle"><del>Retail business</del></li></ul><ul id="1567d587-cf48-80df-8739-ca606304a6ab" class="bulleted-list"><li style="list-style-type:circle">Real estate (needs GIS too) </li></ul></li></ul><ul id="1567d587-cf48-8005-9828-c20cc38c7878" class="bulleted-list"><li style="list-style-type:disc"><del>Consumer mapping uses</del><ul id="1567d587-cf48-80c6-b12c-e07666f2a822" class="bulleted-list"><li style="list-style-type:circle"><del>Store locator</del></li></ul><ul id="1567d587-cf48-80a3-b81f-d9af90fed0e1" class="bulleted-list"><li style="list-style-type:circle"><del>Driving directions</del></li></ul><ul id="1567d587-cf48-8096-813a-f6da110e4093" class="bulleted-list"><li style="list-style-type:circle"><del>Points of interest</del></li></ul></li></ul><ul id="1567d587-cf48-80c1-b475-dded2a61ad5f" class="bulleted-list"><li style="list-style-type:disc">GIS uses<ul id="1567d587-cf48-80fc-a142-caeefd8451f0" class="bulleted-list"><li style="list-style-type:circle">Planning and analysis</li></ul><ul id="1567d587-cf48-80c4-82bc-d9529cf09a77" class="bulleted-list"><li style="list-style-type:circle">Buffering</li></ul><ul id="1567d587-cf48-8026-b8e6-c833ce55a84d" class="bulleted-list"><li style="list-style-type:circle">Feature and drill down queries</li></ul></li></ul><hr id="1567d587-cf48-80c7-ac68-c62cb93b82a8"/><h2 id="1567d587-cf48-80a6-9b84-ceeb168aa692" class="">Key concepts in Consumer Mapping</h2><ul id="1567d587-cf48-809c-a90a-c11e67e27a51" class="bulleted-list"><li style="list-style-type:disc"><del>Tiles, not</del> vector data</li></ul><ul id="1567d587-cf48-8061-9642-f616e53b020c" class="bulleted-list"><li style="list-style-type:disc"><del>Map themes, not</del> layers <del>(road, aerial, hybrid)</del></li></ul><ul id="1567d587-cf48-803b-acdd-ff6704fe95af" class="bulleted-list"><li style="list-style-type:disc">Integrated search</li></ul><hr id="1567d587-cf48-8040-a777-f68e32697ad8"/><p id="1567d587-cf48-80fa-a327-ef50cac52d5a" class="">Web Mercator, Google Web Mercator,<br/>Spherical Mercator, WGS 84 Web<br/>Mercator, WGS 84/Pseudo-Mercator<br/></p><hr id="1567d587-cf48-80d4-aeb2-cd87135dfeb2"/><p id="1567d587-cf48-806d-907f-c126a8bf958b" class=""><a href="http://openstreetmap.org/">http://openstreetmap.org/</a></p><p id="1567d587-cf48-801f-a3bc-c61bc91527bc" class="">
+</p><ul id="1567d587-cf48-80e2-9c86-f1d82b1e9174" class="bulleted-list"><li style="list-style-type:disc">Searching</li></ul><ul id="1567d587-cf48-8032-bf81-e315ca6fb625" class="bulleted-list"><li style="list-style-type:disc">Finding directions (shortest route)</li></ul><hr id="1567d587-cf48-801a-a47f-e0dae5f122d1"/><h3 id="1567d587-cf48-808b-9605-c932727beff6" class="">Spatial Data Infrastructure (SDI)</h3><ul id="1567d587-cf48-8045-a628-d6655f495de6" class="bulleted-list"><li style="list-style-type:disc"> the infrastructure that facilitates the discovery, access,<br/>management, distribution, reuse, and preservation of<br/>digital geospatial resources<br/></li></ul><ul id="1567d587-cf48-80c7-9cc8-d03b46a181cb" class="bulleted-list"><li style="list-style-type:disc">these resources may include maps, data, geospatial<br/>services, and tools<br/></li></ul><ul id="1567d587-cf48-80b9-bd30-e1f3cc1deab7" class="bulleted-list"><li style="list-style-type:disc">as cyberinfrastructures, SDIs are similar to other<br/>infrastructures, such as water supplies and<br/>transportation networks, since they play fundamental<br/>roles in many aspects of the society<br/></li></ul><hr id="1567d587-cf48-8015-9ab7-d7d92c5065b2"/><p id="1567d587-cf48-809c-8e3b-cd651994dc57" class="">Data &amp; Service Providers = Data + Services</p><p id="1567d587-cf48-804e-88b3-c9ee01b63b85" class="">Geoportal = Metadata DBMS + Web interface</p><p id="1567d587-cf48-80e3-9110-c77ecb5dce9c" class="">GIS Users = Tablets + Laptops + Phones</p><p id="1567d587-cf48-80ad-8bc3-df42f01061a3" class="">
+</p><p id="1567d587-cf48-80fa-b424-d74fb973ea17" class="">Data &amp; Service Providers — publish —&gt; Geoportal</p><p id="1567d587-cf48-8024-aa10-ea61d7d7519b" class="">Geoportal ← Search &amp; discover → GIS Users</p><p id="1567d587-cf48-800e-a9dc-dded441ea308" class="">GIS Users — Consume → Data &amp; Service Providers</p><hr id="1567d587-cf48-80ac-bd10-ef1746011d9b"/><h2 id="1567d587-cf48-802e-af7b-d1228a83cd39" class="">Geoportal:</h2><ul id="1567d587-cf48-80d7-8521-cb28ead9cee9" class="bulleted-list"><li style="list-style-type:disc">a gateway website through which people can search,<br/>discover, access, and visualize the geospatial<br/>resources within a SDI (spatial data infrastructure)<br/></li></ul><ul id="1567d587-cf48-804e-a582-ec621d12b7fa" class="bulleted-list"><li style="list-style-type:disc">these resources may include maps, data, geospatial<br/>services, and tools<br/></li></ul><hr id="1567d587-cf48-8090-82f8-d70095f60bfd"/><h1 id="1567d587-cf48-80ca-9635-ef5fe14e3acc" class="">Thematic_maps_QGIS.pdf</h1><p id="1577d587-cf48-806f-a30c-e86d22e74240" class="">
+</p><ul id="1567d587-cf48-807a-89be-dd986c2defa8" class="bulleted-list"><li style="list-style-type:disc">Single symbol</li></ul><ul id="1567d587-cf48-8086-b516-fb646b85e69f" class="bulleted-list"><li style="list-style-type:disc">Simple fill</li></ul><figure id="1567d587-cf48-804d-b51a-dab80e871dac" class="image"><a href="image%201.png"><img style="width:132px" src="image%201.png"/></a></figure><ul id="1567d587-cf48-80a3-ad0e-c9669f41caa3" class="bulleted-list"><li style="list-style-type:disc">Select color:<ul id="1577d587-cf48-8015-a601-fe375b5a621a" class="bulleted-list"><li style="list-style-type:circle">Color ramp</li></ul><ul id="1577d587-cf48-805b-82e2-c59a02ab3742" class="bulleted-list"><li style="list-style-type:circle">Color wheel</li></ul><ul id="1577d587-cf48-801c-8375-f360a2af748a" class="bulleted-list"><li style="list-style-type:circle">Color swatches</li></ul></li></ul><ul id="1577d587-cf48-800b-93dc-ed22d4caae14" class="bulleted-list"><li style="list-style-type:disc">Categorized</li></ul><figure id="1577d587-cf48-80bc-a6ad-da8c0e88c040" class="image"><a href="image%202.png"><img style="width:240px" src="image%202.png"/></a></figure><ul id="1577d587-cf48-8095-bbf5-eb016e1ec31f" class="bulleted-list"><li style="list-style-type:disc">Graduated (choropleth map) </li></ul><figure id="1577d587-cf48-8066-8460-fe2a30f4be21" class="image"><a href="image%203.png"><img style="width:240px" src="image%203.png"/></a></figure><ul id="1577d587-cf48-80c6-a4e5-e61c59106cfb" class="bulleted-list"><li style="list-style-type:disc">Histogram</li></ul><hr id="1577d587-cf48-80a1-bcbf-dd627ad12eb7"/><h3 id="1577d587-cf48-8098-9596-d6c5416f422b" class="">Classification modes</h3><ul id="1577d587-cf48-8027-b4ea-e57314956ac1" class="bulleted-list"><li style="list-style-type:disc">Equal Count (Quantiles)<ul id="1577d587-cf48-808d-b310-dd26823bbd1c" class="bulleted-list"><li style="list-style-type:circle">Each class contains the same <strong>number of features</strong></li></ul><ul id="1577d587-cf48-8019-99c4-c1583325a816" class="bulleted-list"><li style="list-style-type:circle">Quantile classification is good when studying data with a linear distribution</li></ul><ul id="1577d587-cf48-80bd-aca8-dcd46675db3c" class="bulleted-list"><li style="list-style-type:circle">Similar features can end up in different classes, or completely different in one class — such distortion can be reduced by increasing the number of classes</li></ul></li></ul><ul id="1577d587-cf48-80b8-a731-f42a2e580d4a" class="bulleted-list"><li style="list-style-type:disc">Equal Interval<ul id="1577d587-cf48-80a1-9308-e0d463157475" class="bulleted-list"><li style="list-style-type:circle">This classification method divides a set of attribute values into a specified <strong>number of classes</strong> with an equal range of attribute values</li></ul><ul id="1577d587-cf48-8033-a57a-e1ab71f152f0" class="bulleted-list"><li style="list-style-type:circle">This is an excellent way to present similar data percentage type, as well as temperature</li></ul></li></ul><ul id="1577d587-cf48-80c1-b17c-c234ab18da1c" class="bulleted-list"><li style="list-style-type:disc">Fixed Interval<ul id="1577d587-cf48-8061-8f7b-ccd3d04dcccd" class="bulleted-list"><li style="list-style-type:circle">A method similar to the equal interval method, the difference being that in this method users define the size of the interval themselves</li></ul></li></ul><ul id="1577d587-cf48-80ef-a990-c3fc25994722" class="bulleted-list"><li style="list-style-type:disc">Natural Breaks (Jenks) / Natural intervals<ul id="1577d587-cf48-80ef-9412-db79d7729f34" class="bulleted-list"><li style="list-style-type:circle">Classes are based on naturally grouped values - the program identifies breaks by looking for groups and patterns in the data.</li></ul><ul id="1577d587-cf48-8077-a87b-c33e0958cb54" class="bulleted-list"><li style="list-style-type:circle">Features are subdivided into classes whose boundaries have created at locations of large jumps in the value of the data.</li></ul></li></ul><ul id="1577d587-cf48-8048-9fb4-ebb1e47a0c07" class="bulleted-list"><li style="list-style-type:disc">Standard Deviation<ul id="1577d587-cf48-80e4-b6bb-cfa4af4c9093" class="bulleted-list"><li style="list-style-type:circle">This method of classification shows the deviation of attribute values from the mean</li></ul><ul id="1577d587-cf48-8012-95c4-e0a338deba8a" class="bulleted-list"><li style="list-style-type:circle">Two-colour scale helps to represent values above and below average</li></ul></li></ul><hr id="1577d587-cf48-80bb-9fdc-d0327c6af178"/><p id="1577d587-cf48-8011-bc98-e3da3e9824cb" class="">&lt;&lt;&lt; Przykłady map &gt;&gt;&gt;</p><p id="1577d587-cf48-80c0-84d0-dc303ee06c05" class="">
+</p><p id="1577d587-cf48-800e-953e-d2daf250601e" class="">Graduated - Size</p><p id="1577d587-cf48-8031-aa6e-da432d65be7d" class="">Provider feature filter</p><p id="1577d587-cf48-800e-a5e3-cff94dd55371" class="">
+</p><p id="1577d587-cf48-801b-831b-e0ffe8a310b9" class="">Dot (density map)</p><p id="1577d587-cf48-80e9-aeca-efd1471ea20f" class="">Random Points inside polygons</p><p id="1577d587-cf48-800e-94b7-ed625df9dec6" class="">
+</p><p id="1577d587-cf48-8086-9aca-c6cbafec2f83" class="">Diagrams - Histogram</p><p id="1577d587-cf48-80b7-9b0d-e7f475cc122d" class="">Diagrams - Pie Chart</p><p id="1577d587-cf48-8053-9652-c61d3d7f0006" class="">
+</p><p id="1577d587-cf48-807f-9bf7-f1130de719b1" class="">Multiple attributes</p><p id="1577d587-cf48-8023-be5e-c48d52b18b39" class="">Labels</p><p id="1577d587-cf48-80ab-bcea-f7c3367dac03" class="">Single Labels</p><hr id="1577d587-cf48-80cc-806a-ed5c02fa920d"/><h2 id="1577d587-cf48-804a-a8cd-c920f71a7c34" class="">Expression builder</h2><p id="1577d587-cf48-8076-85e3-d98027457abd" class="">Example expression:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1577d587-cf48-80af-a27a-c8e1a71d8708" class="code"><code class="language-JavaScript">&#x27;Ludnosc miejska: &#x27; || round(&quot;Ludnosc_mi&quot; / 1000, 0) || &#x27; tys.&#x27; || &#x27;\n&#x27; || 
+&#x27;Ludnosc wiejska: &#x27; || round(&quot;Ludnosc_ws&quot; / 1000, 0) || &#x27; tys.&#x27;</code></pre><p id="1577d587-cf48-805a-8ef0-d0960b8ea3bb" class="">Example functions:<br/>round (&quot;“FIELD&quot;, n) \n)<br/>lower (&quot;FIELD&quot;) e.g. OPOLSKIE — opolskie<br/>upper (&quot;FIELD&quot;) e.g. Opolskie — OPOLSKIE<br/></p><hr id="1577d587-cf48-8077-bfa0-f30bae0ddeb2"/><p id="1577d587-cf48-8056-8836-dfc82e99d94b" class="">Data defined override</p><p id="1577d587-cf48-8093-b3a6-d910db3d9400" class="">Rule-based labeling</p><p id="1577d587-cf48-80f7-9844-f9de3d94121a" class="">Edit rule</p><hr id="1577d587-cf48-8040-9184-eb549c3d8d55"/><h1 id="1577d587-cf48-80a8-bc14-c5d6b863fe8d" class="">Thematic_maps_GUS.pdf</h1><p id="1577d587-cf48-80b6-825e-fbe9d0e6c636" class="">
+</p><h3 id="1577d587-cf48-8075-a7ee-edcb443e1590" class="">Thematic map</h3><ul id="1577d587-cf48-80d9-a3d9-f0f6d7b07fed" class="bulleted-list"><li style="list-style-type:disc">portrays the geographic pattern of a particular subject matter (theme) in a geographic area</li></ul><ul id="1577d587-cf48-802a-b764-ff7d734b67ad" class="bulleted-list"><li style="list-style-type:disc">use map symbols to visualize selected properties of geographic features (phenomena) that are not naturally visible, such as temperature, language, or population</li></ul><ul id="1577d587-cf48-80c2-a860-c53c4e1b779c" class="bulleted-list"><li style="list-style-type:disc">they contrast with general reference (base, topographic) maps, which focus on the location (more than the properties) of a diverse set of physical features, such as rivers, roads, and buildings</li></ul><hr id="1577d587-cf48-80b0-9b9f-c3c9ecf2d62e"/><h3 id="1577d587-cf48-8020-8a15-ca1d68ed477e" class="">Statistics Poland</h3><ul id="1577d587-cf48-80da-96f5-c4b54b27afe4" class="bulleted-list"><li style="list-style-type:disc">formerly known in English as the Central Statistical Office</li></ul><ul id="1577d587-cf48-80a9-952a-fcd4580d32ea" class="bulleted-list"><li style="list-style-type:disc">in Polish: Główny Urząd Statystyczny (GUS)</li></ul><ul id="1577d587-cf48-80af-bedc-efa01d8229cf" class="bulleted-list"><li style="list-style-type:disc">Poland&#x27;s chief government executive agency charged with collecting and publishing Statistics related to the country&#x27;s economy, population, and society, at the national and local levels</li></ul><ul id="1577d587-cf48-80a5-a644-f89f6c1961c7" class="bulleted-list"><li style="list-style-type:disc">Local Data Bank</li></ul><ul id="1577d587-cf48-80dd-97f2-d2ac31c6733d" class="bulleted-list"><li style="list-style-type:disc">GUS Geostatistics portal (GUS Portal Geostatystyczny)</li></ul><ul id="1577d587-cf48-80df-80e7-daf07a679f40" class="bulleted-list"><li style="list-style-type:disc">Statistics Poland</li></ul><hr id="1577d587-cf48-8030-8958-c06180f5ec32"/><h3 id="1577d587-cf48-80ee-80f9-d420a6c791d2" class="">Geostatistics (Wikipedia)</h3><ul id="1577d587-cf48-8061-bd87-e604a75d0f7d" class="bulleted-list"><li style="list-style-type:disc">a branch of statistics focusing on spatial or spatiotemporal datasets</li></ul><ul id="1577d587-cf48-80ef-9d3d-e7128e81206d" class="bulleted-list"><li style="list-style-type:disc">Developed originally to predict probability distributions of ore grades for mining operations.</li></ul><ul id="1577d587-cf48-8067-b188-cb389aeebef5" class="bulleted-list"><li style="list-style-type:disc">Is intimately related to interpolation methods but extends far beyond simple interpolation problems.</li></ul><ul id="1577d587-cf48-80ef-93d9-f1655a4206b8" class="bulleted-list"><li style="list-style-type:disc">Geostatistical techniques rely on statistical models that are based on random function (or random variable) theory to model the uncertainty associated with spatial estimation and simulation.</li></ul><ul id="1577d587-cf48-800d-b5e5-ec167cc70e8f" class="bulleted-list"><li style="list-style-type:disc">Not to be confused with statistical geography.</li></ul><ul id="1577d587-cf48-80c1-add2-c27bee7d242c" class="bulleted-list"><li style="list-style-type:disc">The study and practice of collecting, analysing, and presenting data with a geographic or areal dimension, such as census or demographic data.</li></ul><ul id="1577d587-cf48-8035-9266-e873a0fd34cb" class="bulleted-list"><li style="list-style-type:disc">It uses techniques from spatial analysis but also encompasses geographical activities such as the defining and naming of geographical regions for statistical purposes</li></ul><hr id="1577d587-cf48-8015-8ecc-f79863949701"/><p id="1577d587-cf48-808b-b464-f2eefddacf8b" class="">Map portal - GUS data </p><ul id="1577d587-cf48-80be-bba5-c3940736ef83" class="bulleted-list"><li style="list-style-type:disc">Add statistical Layer</li></ul><ul id="1577d587-cf48-8019-830d-d742f5628c5d" class="bulleted-list"><li style="list-style-type:disc">Export layers</li></ul><ul id="1577d587-cf48-80e0-8b8c-f7bf91808922" class="bulleted-list"><li style="list-style-type:disc">Print editor → print to pdf</li></ul><hr id="1577d587-cf48-8037-8e97-ec453e448fc5"/><h1 id="1577d587-cf48-8033-9b37-fc1cac6d9c00" class="">Q-GIS_intro.pdf</h1><p id="1577d587-cf48-8025-bd8c-d55eed82d310" class="">
+</p><p id="1577d587-cf48-80df-86fe-c00aa742115b" class="">GPS - Global Positioning System (GNSS - Global Navigation Satellite System)</p><p id="1577d587-cf48-80a7-aa20-ec0b0e6c68db" class="">Trilateral → involving three groups or countries:</p><ol type="1" id="1577d587-cf48-8099-9d58-e3dfb328cd9a" class="numbered-list" start="1"><li>Trilateration From Satelites is the Basis of the System </li></ol><ol type="1" id="1577d587-cf48-80ce-a732-edba3e663790" class="numbered-list" start="2"><li>To Trilaterate, GPS Measures Distance Using the Travel Time of a Radio Signal</li></ol><ol type="1" id="1577d587-cf48-8087-9e69-ef1a73e80346" class="numbered-list" start="3"><li>To Measure Travel time, GPS needs very accurate clocks</li></ol><ol type="1" id="1577d587-cf48-8097-a26c-c8ec5f4560e0" class="numbered-list" start="4"><li>In addition to knowing the distance to a satellite, a User needs to know the Satellite’s location</li></ol><ol type="1" id="1577d587-cf48-802d-badd-ddb311cb1a5f" class="numbered-list" start="5"><li>As the GPS signal travels through the lonosphere and Earth’s atmosphere it gets delayed</li></ol><hr id="1577d587-cf48-80b4-a424-f12fa2b28242"/><p id="1577d587-cf48-8069-92f0-c88892ea82f9" class="">Sextant - kątomierz lusterkowy</p><p id="1577d587-cf48-80a8-b060-c3f4376899e1" class="">Plane table survery</p><hr id="1577d587-cf48-8059-b9d3-c8ebc7dcf38c"/><p id="1577d587-cf48-8033-a021-e0d6023aee92" class="">Definition </p><p id="1577d587-cf48-8044-b472-c05ae1682938" class="">A system for acquiring, processing and sharing data that contains spatial information and accompanying descriptive information about objects identified in the part of space<br/>covered by the system. - Systemy informacji przestrzennej<br/></p><hr id="1577d587-cf48-801c-bd05-efcf8ebebeb1"/><p id="1577d587-cf48-8020-a2b0-ed883d523b69" class="">Spatial/geographic(al) information </p><p id="1577d587-cf48-8081-84b1-cd25791c7e3f" class="">“Information about the location, geometric properties and spatial relationships of objects that can be identified in relation to the Earth. The concept of object here is broad, encompassing not only permanent natural and artificial objects, but also natural, social and economic phenomena.” [Systemy informacji przestrzennej J. Gaździcki]</p><hr id="1577d587-cf48-80a7-a5d2-f14b0c45407c"/><h3 id="1577d587-cf48-80c2-93e2-df8a65877421" class="">Geographic Information System (GIS) </h3><ul id="1577d587-cf48-8025-b94e-ed517593d55f" class="bulleted-list"><li style="list-style-type:disc">is a system that creates, manages, analyzes, and maps all types of data.</li></ul><ul id="1577d587-cf48-806d-b0a9-c22d6db9aebf" class="bulleted-list"><li style="list-style-type:disc">GIS connects data to a map, integrating location data (where things are) with all types of descriptive information (what things are like there) [<a href="http://esri.com/">esri.com</a>].</li></ul><ul id="1577d587-cf48-8018-837c-ce1c2c877d35" class="bulleted-list"><li style="list-style-type:disc">This provides a foundation for mapping and analysis that is used in science and almost<br/>every industry.<br/></li></ul><ul id="1577d587-cf48-805f-85a5-e7fa4587105a" class="bulleted-list"><li style="list-style-type:disc">GIS helps users understand patterns, relationships, and geographic context.</li></ul><ul id="1577d587-cf48-8024-88f3-e0a3cdff6d1f" class="bulleted-list"><li style="list-style-type:disc">The benefits include improved communication and efficiency as well as better management and decision making [<a href="http://esri.com/">esri.com</a>].</li></ul><hr id="1577d587-cf48-80d0-a75f-d1e19913b560"/><h3 id="1577d587-cf48-803a-9c70-d466720e6d3a" class="">Data models</h3><ul id="1577d587-cf48-8070-b2c8-d5e065bb49f0" class="bulleted-list"><li style="list-style-type:disc">vector (points, linestrings. polygons) <ul id="1577d587-cf48-80e5-84d9-d0cf024bc58c" class="bulleted-list"><li style="list-style-type:circle">customers</li></ul><ul id="1577d587-cf48-8061-ab95-ef62b5b570fb" class="bulleted-list"><li style="list-style-type:circle">streets</li></ul></li></ul><ul id="1577d587-cf48-8012-8f2f-d40f1a80adda" class="bulleted-list"><li style="list-style-type:disc">raster (grid)<ul id="1577d587-cf48-8075-8511-e09f529c5050" class="bulleted-list"><li style="list-style-type:circle">elevation</li></ul><ul id="1577d587-cf48-8035-b19a-c12c2948f1e1" class="bulleted-list"><li style="list-style-type:circle">land usage</li></ul></li></ul><ul id="1577d587-cf48-801b-acaa-f3f5455973dd" class="bulleted-list"><li style="list-style-type:disc">TIN - Triangular Irregular Network</li></ul><ul id="1577d587-cf48-808c-8d8f-c4cd0050d4a5" class="bulleted-list"><li style="list-style-type:disc">(tabular)</li></ul><hr id="1577d587-cf48-80b5-9429-eb925f71a651"/><p id="1577d587-cf48-80b1-8cc6-f7515d50f9fe" class="">Thematic layers (przykład  Rezerwat przyrody)</p><ul id="1577d587-cf48-80af-bfed-e505b4c122a1" class="bulleted-list"><li style="list-style-type:disc">Rejony administracyjne</li></ul><ul id="1577d587-cf48-8036-ad2f-c790c2c626f0" class="bulleted-list"><li style="list-style-type:disc">Lasy liściaste</li></ul><ul id="1577d587-cf48-80bb-824b-d87b0b3da242" class="bulleted-list"><li style="list-style-type:disc">Rzeki</li></ul><ul id="1577d587-cf48-803f-beea-f2f42cffa42d" class="bulleted-list"><li style="list-style-type:disc">Stanowiska roślin chronionych</li></ul><ul id="1577d587-cf48-8086-a3de-e7bcaadf40d9" class="bulleted-list"><li style="list-style-type:disc">Ścieżki</li></ul><ul id="1577d587-cf48-80e1-af55-cfd80f1501ad" class="bulleted-list"><li style="list-style-type:disc">Tablice informacyjne</li></ul><ul id="1577d587-cf48-803f-a226-de8ac27399be" class="bulleted-list"><li style="list-style-type:disc">Ortofotomapa terenu</li></ul><hr id="1577d587-cf48-805c-b813-ecf51f0e2060"/><ul id="1577d587-cf48-8091-bf6d-dfa388e840d3" class="bulleted-list"><li style="list-style-type:disc">Data processing</li></ul><ul id="1577d587-cf48-800c-a35d-e2795b2f95fd" class="bulleted-list"><li style="list-style-type:disc">Data output</li></ul><h3 id="1577d587-cf48-80f5-b609-c54ec6c5dd7b" class="">GIS applications </h3><ul id="1577d587-cf48-8088-8182-f5cd8650728f" class="bulleted-list"><li style="list-style-type:disc">Thematic maps</li></ul><ul id="1577d587-cf48-808e-81a2-e05787c7e200" class="bulleted-list"><li style="list-style-type:disc">3D visualization</li></ul><ul id="1577d587-cf48-80db-81f7-fa170302f60b" class="bulleted-list"><li style="list-style-type:disc">Cadastral maps (mapy z działkami i domami)</li></ul><ul id="1577d587-cf48-8000-8b18-ec121d291949" class="bulleted-list"><li style="list-style-type:disc">Spatial analysis</li></ul><hr id="1577d587-cf48-8035-87e3-d90a9273a3de"/><h3 id="1577d587-cf48-8077-b344-d1c50f668935" class="">Example: QGIS (formerly Quantum GIS)</h3><p id="1577d587-cf48-80ce-93d3-e9de64eca026" class=""> </p><p id="1577d587-cf48-805e-9cb4-fef79ea0ddad" class="">Three basic components:</p><ul id="1577d587-cf48-80ab-880b-f8ddf4383c9e" class="bulleted-list"><li style="list-style-type:disc">QGIS Desktop</li></ul><ul id="1577d587-cf48-802d-9dbc-d290417c0307" class="bulleted-list"><li style="list-style-type:disc">QGIS Browser</li></ul><ul id="1577d587-cf48-8029-b402-e0ea1744c316" class="bulleted-list"><li style="list-style-type:disc">Processing Toolbox</li></ul><p id="1577d587-cf48-80c1-9e14-e383b2ed74d0" class="">
+</p><p id="1577d587-cf48-80f1-b248-c4b5c8033227" class="">Vector data formats</p><ul id="1577d587-cf48-8028-9e7c-fdf2c1ea1d8e" class="bulleted-list"><li style="list-style-type:disc">Shapefiles</li></ul><ul id="1577d587-cf48-8002-8e0e-df14036876a5" class="bulleted-list"><li style="list-style-type:disc">Spatial databases<ul id="1577d587-cf48-8089-8a6d-d5cea7fc25d8" class="bulleted-list"><li style="list-style-type:circle">GeoPackage</li></ul><ul id="1577d587-cf48-8032-95f4-dd41ce643943" class="bulleted-list"><li style="list-style-type:circle">SpatiaLite</li></ul><ul id="1577d587-cf48-809f-9543-e76000ca4695" class="bulleted-list"><li style="list-style-type:circle">PostGIS</li></ul></li></ul><p id="1577d587-cf48-80f9-813b-e0ff868f617c" class="">
+</p><p id="1577d587-cf48-801d-80bc-ca75be29ef1c" class="">Raster formats (GDAL)</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1577d587-cf48-8057-a309-e97f9e346ce2" class="code"><code class="language-Plain Text">TIFF/GeoTIFF (*.tif + .tfw)
+ArcInfo ASCII Grid (.asc)
+ERDAS IMAGINE (*.img)
+Esri GRID (without extension — folder)
+BMP (*.bmp + .bpw), GIF (.gif + .gfw), PNG (.png + .pgw)
+GRIB — used in meteorology (.grb)
+Surfer (*.grd)
+Intergraph (*.cit, *.cot)
+MrSID (*.sid + *.sdw)
+JPEG (*.jpg + *.jgw), JPEG 2000 (*.jp2, *.j2c, *.j2k, *.jpx)</code></pre><p id="1577d587-cf48-8095-812d-ce094d255a58" class="">World file</p><p id="1577d587-cf48-80b6-ae66-ea7c2c90df3b" class="">ArcInfo ASCII Grid</p><p id="1577d587-cf48-80e6-a26d-d9d2204ce162" class="">Bith depths (number of bits per pixel)</p><p id="1577d587-cf48-8082-86bf-df82beceaa2a" class="">
+</p><p id="1577d587-cf48-80e1-9946-ed1c594554e3" class="">Compression methods (lossy and lossless)</p><p id="1577d587-cf48-80fd-acbe-d9881b070807" class="">Lossy: JPEG, JPEG 2000 - reszta Lossless</p><p id="1577d587-cf48-803f-a1d0-e83eb94590c8" class="">
+</p><p id="1577d587-cf48-803d-a99e-c8039be6c8b7" class="">Geoid → ellipsoid</p><p id="1577d587-cf48-801a-9fb5-f2305e7597bb" class="">Ellipsoid globally best fitting to the geoid</p><hr id="1577d587-cf48-8006-bebe-f4da23fd6a11"/><ul id="1577d587-cf48-80f2-a9a8-de92ce4d67a7" class="bulleted-list"><li style="list-style-type:disc">Coordinate Reference Systems (CRS) </li></ul><ul id="1577d587-cf48-80c6-a47f-efa553d31e60" class="bulleted-list"><li style="list-style-type:disc">none (or WGS84)</li></ul><ul id="1577d587-cf48-80d3-97d3-f486e0a23204" class="bulleted-list"><li style="list-style-type:disc">Universal Transverse Mercator (UTM)</li></ul><p id="1577d587-cf48-8091-bd8e-f453b83be663" class="">
+</p><p id="1577d587-cf48-80bc-ad71-e37e413011d8" class="">Map projection families</p><p id="1577d587-cf48-80a7-bc33-e773a8c0b879" class="">Cartographic (map) projections</p><h3 id="1577d587-cf48-8044-8a43-cbcbee84698f" class="">Coordinate Reference Systems (CRS) </h3><ul id="1577d587-cf48-8092-92b4-e9294ed2b53e" class="bulleted-list"><li style="list-style-type:disc">Robinson (balanced) </li></ul><ul id="1577d587-cf48-8039-a2d6-ce7ef29cb627" class="bulleted-list"><li style="list-style-type:disc">Mercator (conformal)</li></ul><ul id="1577d587-cf48-8099-96cb-ef219fd75f75" class="bulleted-list"><li style="list-style-type:disc">Azimuthal (equidistant) </li></ul><ul id="1577d587-cf48-8015-8948-d34c7d4c0c88" class="bulleted-list"><li style="list-style-type:disc">Mollweide (equal area) </li></ul><ul id="1577d587-cf48-807c-8d9a-dd21ed72e306" class="bulleted-list"><li style="list-style-type:disc">Bonne</li></ul><ul id="1577d587-cf48-80aa-82ad-d5c295f233e5" class="bulleted-list"><li style="list-style-type:disc">Fuller</li></ul><ul id="1577d587-cf48-8076-98ed-d6b936b86c60" class="bulleted-list"><li style="list-style-type:disc">Goode Homolosine (Ocean)</li></ul><p id="1577d587-cf48-80f9-9dbd-d5e1625b8987" class="">
+</p><p id="1577d587-cf48-80f3-8750-c3773b0135e5" class="">
+</p><ul id="1577d587-cf48-8004-a970-cb13532906eb" class="bulleted-list"><li style="list-style-type:disc">EPSG </li></ul><ul id="1577d587-cf48-808a-b9b9-dba24ec74dca" class="bulleted-list"><li style="list-style-type:disc">WGS84</li></ul><ul id="1577d587-cf48-8009-97e7-ee6ecfc29833" class="bulleted-list"><li style="list-style-type:disc">Pulkovo 1942(58)/Poland zone I </li></ul><ul id="1577d587-cf48-80de-828c-d26e19d379c1" class="bulleted-list"><li style="list-style-type:disc">PL-2000 zone 7</li></ul><ul id="1577d587-cf48-8093-ac38-e825225ad3ec" class="bulleted-list"><li style="list-style-type:disc">PL-1992</li></ul><p id="1577d587-cf48-802f-a5aa-e42e73598c7b" class="">
+</p><hr id="1577d587-cf48-80e8-ad11-d5a0366c761f"/><p id="1577d587-cf48-80df-a722-e8e29f4b0e04" class="">epsg.io</p><p id="1577d587-cf48-8017-8eb2-ecc61a6d8edb" class="">Coordinate Systems Worldwide</p><p id="1577d587-cf48-8042-8cdd-fb8aa02086ae" class="">
+</p><p id="1577d587-cf48-80fd-afc0-f3c928dc952c" class="">Tablular data:</p><ul id="1577d587-cf48-801c-b022-d14af95407d1" class="bulleted-list"><li style="list-style-type:disc">attribute tables</li></ul><ul id="1577d587-cf48-80b3-93e7-d5f03376c735" class="bulleted-list"><li style="list-style-type:disc">dBase files (*.dbf)</li></ul><ul id="1577d587-cf48-804e-b737-e5d4ade806d7" class="bulleted-list"><li style="list-style-type:disc">tables in databases</li></ul><p id="1577d587-cf48-806f-b8f0-f7368572157a" class="">
+</p><p id="1577d587-cf48-80c7-b060-f8090f70b88f" class="">Data types in tables</p><ul id="1577d587-cf48-806d-b6dd-e85920c532bd" class="bulleted-list"><li style="list-style-type:disc">Integer (32 bits)</li></ul><ul id="1577d587-cf48-8023-bef3-f6f821993037" class="bulleted-list"><li style="list-style-type:disc">Integer (64 bits) </li></ul><ul id="1577d587-cf48-80ad-95a0-ea37f0607771" class="bulleted-list"><li style="list-style-type:disc">Decimal number (real) </li></ul><ul id="1577d587-cf48-80eb-a972-ef8b9da2f9df" class="bulleted-list"><li style="list-style-type:disc">Text (string) </li></ul><ul id="1577d587-cf48-802d-ab6a-fc60ef602e49" class="bulleted-list"><li style="list-style-type:disc">Date</li></ul><p id="1577d587-cf48-804b-a5f1-fb2c3d104f4b" class="">
+</p><p id="1577d587-cf48-80f3-8e78-eb994c274832" class="">Length and precision </p><ul id="1577d587-cf48-8098-bff7-cb2ad15e34d1" class="bulleted-list"><li style="list-style-type:disc">Length — the number of digits in the number together before and after the decimal point, or (for texts and integers) the column width</li></ul><ul id="1577d587-cf48-8013-9c3b-f38ebb300e57" class="bulleted-list"><li style="list-style-type:disc">Precision — number of digits after decimal point</li></ul><p id="1577d587-cf48-80cc-82c3-e882b4ed882f" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
